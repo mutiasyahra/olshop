@@ -8,7 +8,7 @@ router.post('/register', olshopController.register)
 router.post('/login', olshopController.login)
 
 // Product endpoints (public)
-router.get('/products/search', authMiddleware, olshopController.searchProducts)  // Search route harus di atas route dengan parameter
+router.get('/products/search', olshopController.searchProducts)
 router.get('/products', olshopController.getAllProducts)
 router.get('/products/:id', olshopController.getProductById)
 

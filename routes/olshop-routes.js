@@ -26,7 +26,6 @@ router.post('/orders/:id/cancel', authMiddleware, olshopController.cancelOrder)
 // Payment endpoints (protected)
 router.post('/payments', authMiddleware, olshopController.createPayment)
 router.get('/payments/:id', authMiddleware, olshopController.getPaymentDetails)
-router.put('/payments/:id/status', authMiddleware, olshopController.updatePaymentStatus)
 
 // Admin endpoints (protected)
 router.post('/admin/products', authMiddleware, olshopController.createProduct)
@@ -35,6 +34,7 @@ router.delete('/admin/products/:id', authMiddleware, olshopController.deleteProd
 router.get('/admin/customers', authMiddleware, olshopController.getAllCustomers)
 router.get('/admin/orders', authMiddleware, olshopController.getAllOrders)
 router.put('/admin/orders/:id/status', authMiddleware, olshopController.updateOrderStatus)
+router.put('/admin/payments/:id/status', authMiddleware, olshopController.updatePaymentStatus)
 router.post('/admin/products/sync', authMiddleware, olshopController.syncExternalProducts)
 
 module.exports = router

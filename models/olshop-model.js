@@ -234,7 +234,7 @@ const olshopModel = {
     },
 
     updateOrderStatus: async (id, status) => {
-        const validStatuses = ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled']
+        const validStatuses = ['Pending', 'Processing', 'Delivered', 'Cancelled']
         if (!validStatuses.includes(status)) {
             throw new Error('Invalid status')
         }
@@ -314,7 +314,7 @@ const olshopModel = {
     },
 
     updatePaymentStatus: async (id, status) => {
-        const validStatuses = ['Pending', 'Paid', 'Failed', 'Refunded']
+        const validStatuses = ['Pending', 'Paid', 'Failed']
         if (!validStatuses.includes(status)) {
             throw new Error('Invalid payment status')
         }
